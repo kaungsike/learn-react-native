@@ -1,15 +1,31 @@
-import { View, Text } from "react-native";
+import { useState } from "react";
+import { View, Text, Button } from "react-native";
 
 type StaffProps = {
   name: string;
   age?: number;
 };
 
-const Staff = ({ name, age  }: StaffProps) => {
+const Staff = ({ name, age }: StaffProps) => {
+  const [isDelete, setIsDelete] = useState(false);
+
   return (
-    <Text style={{ fontSize: 20, fontWeight: "bold", color: "#11181C" }}>
-      {name} {age? `- ${age}` : ""}
-    </Text>
+    <>
+      <Text
+        style={{
+          fontSize: 20,
+          fontWeight: "bold",
+          color: "#11181C",
+          textDecorationLine: isDelete ? "line-through" : "none",
+        }}
+      >
+        {name} {age ? `- ${age}` : ""}
+      </Text>
+      <Button
+        title={isDelete ? "Undo" : "Delete"}
+        onPress={() => setIsDelete((prev) => !prev)}
+      />
+    </>
   );
 };
 
