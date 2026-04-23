@@ -17,7 +17,7 @@ export default function HomeScreen() {
         {/* <Link style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }} href="/detail">Home Detail</Link> */}
         <Button
           title="Go to detail"
-          onPress={() => router.navigate("/detail")}
+          onPress={() => router.navigate({pathname : '/detail',params : {id : 5}})}
         />
       </View>
     </>
