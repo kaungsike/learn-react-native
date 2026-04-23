@@ -14,7 +14,7 @@ export default function HomeScreen() {
           backgroundColor: "#ffffff",
         }}
       >
-        {/* <Link style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }} href="/detail">Home Detail</Link> */}
+        <Link style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }} href="/detail?id=10">Home Detail</Link>
         <Button
           title="Go to detail"
           onPress={() => router.navigate({pathname : '/detail',params : {id : 5}})}
