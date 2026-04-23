@@ -44,8 +44,8 @@ export default function HomeScreen() {
         <Text style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }}>
           Hello Mobile Developer!
         </Text>
-        <Link style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }} href="/(tabs)/(home)/detail">Home Detail</Link>
-        <Link style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }} href="/(tabs)/profile/setting">Home Profile Setting</Link>
+        <Link style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }} href="/detail">Home Detail</Link>
+        <Link style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }} href="/setting">Home Profile Setting</Link>
         <Staff name="John Doe" />
         <Staff name="Smith" age={21} />
       </View>
