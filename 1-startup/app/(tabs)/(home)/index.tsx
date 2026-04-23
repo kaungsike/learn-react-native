@@ -1,36 +1,9 @@
-import { Link } from "expo-router";
-import { useState } from "react";
-import { View, Text, Button } from "react-native";
-
-type StaffProps = {
-  name: string;
-  age?: number;
-};
-
-const Staff = ({ name, age }: StaffProps) => {
-  const [isDelete, setIsDelete] = useState(false);
-
-  return (
-    <>
-      <Text
-        style={{
-          fontSize: 20,
-          fontWeight: "bold",
-          color: "#11181C",
-          textDecorationLine: isDelete ? "line-through" : "none",
-        }}
-      >
-        {name} {age ? `- ${age}` : ""}
-      </Text>
-      <Button
-        title={isDelete ? "Undo" : "Delete"}
-        onPress={() => setIsDelete((prev) => !prev)}
-      />
-    </>
-  );
-};
+import { Link, useRouter } from "expo-router";
+import { Button, View } from "react-native";
 
 export default function HomeScreen() {
+  const router = useRouter();
+
   return (
     <>
       <View
@@ -41,13 +14,11 @@ export default function HomeScreen() {
           backgroundColor: "#ffffff",
         }}
       >
-        <Text style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }}>
-          Hello Mobile Developer!
-        </Text>
-        <Link style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }} href="/detail">Home Detail</Link>
-        <Link style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }} href="/setting">Home Profile Setting</Link>
-        <Staff name="John Doe" />
-        <Staff name="Smith" age={21} />
+        {/* <Link style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }} href="/detail">Home Detail</Link> */}
+        <Button
+          title="Go to detail"
+          onPress={() => router.navigate("/detail")}
+        />
       </View>
     </>
   );
