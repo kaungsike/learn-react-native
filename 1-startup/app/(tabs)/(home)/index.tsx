@@ -1,8 +1,7 @@
-import { Link, useRouter } from "expo-router";
-import { Button, View } from "react-native";
+import { Link } from "expo-router";
+import { View } from "react-native";
 
 export default function HomeScreen() {
-  const router = useRouter();
 
   return (
     <>
@@ -32,12 +31,6 @@ export default function HomeScreen() {
         >
           Setting
         </Link>
-        <Button
-          title="Go to detail"
-          onPress={() =>
-            router.navigate({ pathname: "/detail", params: { id: 5 } })
-          }
-        />
       </View>
     </>
   );
