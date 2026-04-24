@@ -22,6 +22,12 @@ export default function HomeScreen() {
         </Link>
         <Link
           style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }}
+          href="/10"
+        >
+          Product Detail
+        </Link>
+        <Link
+          style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }}
           href="/settings/john"
         >
           Go to settings user
