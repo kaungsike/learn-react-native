@@ -13,6 +13,8 @@ const detail = () => {
       <Text>detail {id}</Text>
       <Link style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }} href="/event">Navigate to Event</Link>
       <Link style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }} href="/event" replace>Replace with Event</Link>
+      <Link style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }} href="/detail?id=100" push>Push to another Detail</Link>
+
       <Button title='Navigate to Event' onPress={ () => router.navigate('/event')}/>
     </View>
   )
