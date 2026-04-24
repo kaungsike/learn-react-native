@@ -28,9 +28,9 @@ export default function HomeScreen() {
         </Link>
         <Link
           style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }}
-          href="/settings/john"
+          href="/settings/David"
         >
-          Go to settings user
+          Setting
         </Link>
         <Button
           title="Go to detail"
