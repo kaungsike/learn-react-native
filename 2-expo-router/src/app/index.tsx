@@ -20,6 +20,12 @@ const Index = () => {
       >
         Go to profile page
       </Link>
+            <Link
+        style={{ fontSize: 15, fontWeight: "bold", color: "#11181C" }}
+        href="(tabs)"
+      >
+        Go to tabs
+      </Link>
     </View>
   );
 };

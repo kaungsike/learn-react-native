@@ -8,6 +8,7 @@ export default function RootLayout() {
     <Stack>
       <Stack.Protected guard={isLoggedIn}>
         <Stack.Screen name="index" options={{ title: "Home" }} />
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Protected guard={isAdmin}>
           <Stack.Screen name="profile" options={{ title: "Profile Page" }} />
         </Stack.Protected>
