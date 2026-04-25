@@ -5,12 +5,20 @@ import { Link } from "expo-router";
 const Index = () => {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Home Screen</Text>
+      <Text style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }}>
+        Home Screen
+      </Text>
       <Link
-        style={{ fontSize: 25, fontWeight: "bold", color: "#11181C" }}
+        style={{ fontSize: 15, fontWeight: "bold", color: "#11181C" }}
         href={"/login"}
       >
         Go to login page
+      </Link>
+      <Link
+        style={{ fontSize: 15, fontWeight: "bold", color: "#11181C" }}
+        href={"/profile"}
+      >
+        Go to profile page
       </Link>
     </View>
   );
