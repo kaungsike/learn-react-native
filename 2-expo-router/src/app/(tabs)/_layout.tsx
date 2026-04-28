@@ -7,7 +7,10 @@ import { Colors } from "@/constants/theme";
 import { useColorScheme } from "@/hooks/use-color-scheme";
 
 export default function TabLayout() {
+
   const colorScheme = useColorScheme();
+
+  const isAdmin = false;
 
   return (
     <Tabs
@@ -27,7 +30,7 @@ export default function TabLayout() {
           ),
         }}
       />
-      <Stack.Protected guard={true}>
+      <Stack.Protected guard={isAdmin}>
         <Tabs.Screen
           name="explore"
           options={{
